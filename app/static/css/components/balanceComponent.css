@@ -1,0 +1,59 @@
+.balance {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    width: max-content;
+    margin: 0 auto;
+    border-radius: var(--defaultBorderRadius);  
+    overflow: hidden;
+    border: var(--defaultBorder);
+    height: 96px;
+    background: var(--lightBackgroundColor);
+}
+
+.balance div {
+    padding: 8px 16px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.balance .ethHeader {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background: var(--ethColor);
+}
+
+.balance .ethValue {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    border-right: var(--defaultBorder);
+}
+
+.balance .zilHeader {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background: var(--zilColor);
+}
+
+.balance .zilValue {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.balance .ethEURValue {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    border-right: var(--defaultBorder);
+}
+
+.balance .zilEURValue {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+@media only screen and (max-width: 700px) {
+    .balance {
+        width: 100%;
+    }
+}

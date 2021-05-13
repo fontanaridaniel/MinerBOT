@@ -1,0 +1,109 @@
+.workersEarnings.desktop table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    max-width: 890px;
+    text-align: center;
+    border: var(--defaultBorder);
+    border-radius: var(--defaultBorderRadius);
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.workersEarnings.desktop td {
+    padding: 4px 16px;
+    border-bottom: var(--defaultBorder);
+    border-right: var(--defaultBorder);
+}
+
+.workersEarnings.desktop .header {
+    color: var(--backgroundColor);
+    background: #ebcd4a;
+    font-weight: bold;
+}
+
+.workersEarnings.desktop .worker td {
+    background: var(--lightBackgroundColor);
+}
+
+.workersEarnings.desktop td.earnings {
+    color: var(--backgroundColor);
+    background: #ebcd4a;
+    font-weight: bold;
+    border-right: 0;
+}
+
+.workersEarnings.desktop tr.last td {
+    border-bottom: 0;
+}
+
+.workersEarnings.desktop td.last {
+    border-right: 0;
+}
+
+.workersEarnings {
+    width: 100%;
+}
+
+.workersEarnings.mobile table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.workersEarnings.mobile td {
+    background: var(--lightBackgroundColor);
+    border-right: var(--defaultBorder);
+    padding: 4px 0;
+}
+
+.workersEarnings.mobile .header {
+    border-left: var(--defaultBorder);
+    font-weight: bold;
+}
+
+.workersEarnings.mobile td.worker {
+    color: var(--backgroundColor);
+    background: #ebcd4a;
+    font-weight: bold;
+    border-top-left-radius: var(--defaultBorderRadius);
+    border-top-right-radius: var(--defaultBorderRadius);
+}
+
+.workersEarnings.mobile tr.earnings td {
+    border-top: var(--defaultBorder);
+    border-bottom: var(--defaultBorder);
+}
+
+.workersEarnings.mobile tr.earnings :first-child {
+    border-bottom-left-radius: var(--defaultBorderRadius);
+}
+
+.workersEarnings.mobile tr.earnings :last-child {
+    border-bottom-right-radius: var(--defaultBorderRadius);
+}
+
+.workersEarnings.mobile tr.spacer {
+    height: 16px;
+}
+
+.mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 770px) {
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: table;
+    }
+}
+
+@media only screen and (max-width: 496px) {
+    .workersEarnings.mobile tr.spacer {
+        height: 8px;
+    }
+}

@@ -1,0 +1,240 @@
+.total {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 16px;
+    width: max-content;
+    border-radius: var(--defaultBorderRadius);
+    background: var(--lightBackgroundColor);
+    color: var(--defaultTextColor);
+    border: var(--defaultBorder);
+    margin: 0 auto;
+    margin-bottom: 16px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.total p {
+    display: inline-block;
+}
+
+.total div p:first-child {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.total .header {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    text-align: center;
+    padding: 4px 16px;
+    color: var(--backgroundColor);
+    background: #ebcd4a;
+}
+
+.total .header p {
+    vertical-align: top;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.total .hashrate {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.total .shares {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.total .power {
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+.workerStateDesktop {
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 0 auto;
+}
+
+.stateIcon {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.workerStateDesktop td {
+    padding: 4px 16px;
+    background: var(--lightBackgroundColor);
+}
+
+.workerStateDesktop .info {
+    font-style: italic;
+    font-weight: bold;
+    color: var(--backgroundColor);
+
+}
+
+.workerStateDesktop .info p {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.workerStateDesktop .info span {
+    font-style: normal;
+    font-size: 16px;
+}
+
+.workerStateDesktop .info td {
+    border: var(--defaultBorder);
+    border-top-left-radius: var(--defaultBorderRadius);
+    border-top-right-radius: var(--defaultBorderRadius);
+}
+
+.workerStateDesktop .header {
+    font-weight: bold;
+    text-align: center;
+}
+
+.workerStateDesktop .header td {
+    border-right: var(--defaultBorder);
+    border-bottom: var(--defaultBorder);
+}
+
+.workerStateDesktop .header td:first-child {
+    border-left: var(--defaultBorder);
+}
+
+.workerStateDesktop .gpu {
+    text-align: center;
+}
+
+.workerStateDesktop .gpu td {
+    border-right: var(--defaultBorder);
+    padding: 8px;
+}
+
+.workerStateDesktop .gpu td:first-child {
+    border-left: var(--defaultBorder);
+}
+
+.workerStateDesktop .gpu.last td {
+    border-bottom: var(--defaultBorder);
+}
+
+.workerStateDesktop .gpu.last td:first-child {
+    border-bottom-left-radius: var(--defaultBorderRadius);
+}
+
+.workerStateDesktop .gpu.last td:last-child {
+    border-bottom-right-radius: var(--defaultBorderRadius);
+}
+
+.workerStateDesktop .spacer td {
+    height: 16px;
+    background: var(--backgroundColor);
+}
+
+.workerStateMobile {
+    display: none;
+}
+
+@media only screen and (max-width: 800px) {
+    .workerStateDesktop {
+        display: none;
+    }
+
+    .workerStateMobile {
+        display: table;
+    }
+
+    .total {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, max-content);
+        width: 100%;
+        text-align: center;
+        grid-gap: 8px;
+        margin-bottom: 8px;
+        background: linear-gradient(180deg, #ebcd4a 25%, var(--lightBackgroundColor) 20%);
+        padding-bottom: 6px;
+    }
+
+    .total .header {
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+
+    .total .hashrate {
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+
+    .total .shares {
+        grid-column: 1/3;
+        grid-row: 3/4;
+    }
+
+    .total .power {
+        grid-column: 1/3;
+        grid-row: 4/5;
+    }
+
+    .workerStateMobile p {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .workerStateMobile {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+
+    .workerStateMobile td {
+        padding: 6px 8px;
+        background: var(--lightBackgroundColor);
+    }
+
+    .workerStateMobile .info {
+        border: var(--defaultBorder);
+        border-top-left-radius: var(--defaultBorderRadius);
+        border-top-right-radius: var(--defaultBorderRadius);
+        color: var(--backgroundColor);
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .workerStateMobile .header {
+        text-align: center;
+        border-left: var(--defaultBorder);
+        border-right: var(--defaultBorder);
+    }
+
+    .workerStateMobile .gpu {
+        text-align: center;
+        border-right: var(--defaultBorder);
+    }
+
+    .workerStateMobile .last {
+        border-bottom: var(--defaultBorder);
+    }
+
+    .workerStateMobile tr.last td:first-child {
+        border-bottom-left-radius: var(--defaultBorderRadius);
+    }
+
+    .workerStateMobile tr.last td:last-child {
+        border-bottom-right-radius: var(--defaultBorderRadius);
+    }
+
+    .workerStateMobile .spacer td {
+        background: var(--backgroundColor);
+    }
+
+}

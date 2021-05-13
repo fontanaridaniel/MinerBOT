@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}"/>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/_constants.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+
+    <!-- COMPONENTS CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/components/balanceComponent.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/components/workersOnlineComponent.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/components/workersStateComponent.css') }}">
+
+    <!-- JS -->
+    <script src="https://kit.fontawesome.com/100b505ca0.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</head>
+
+<body>
+    <div class="topSection">
+        <div id="balanceComponent"></div>
+        <div id="workersOnlineComponent">
+        </div>
+        <a class="charts" href="{{url_for('charts')}}">
+            <div class="chartsContainer">
+                <p><i class="far fa-chart-bar"></i> CHARTS</p>
+            </div>
+        </a>
+        <a class="earnings" href="{{url_for('earnings')}}">
+            <div class="earningsContainer">
+                <p><i class="fas fa-coins"></i> EARNINGS</p>
+            </div>
+        </a>
+    </div>
+    <div id="workersStateComponent"></div>
+</body>
+
+</html>

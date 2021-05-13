@@ -1,0 +1,49 @@
+{
+  "miner": {
+    "devices": [
+      {
+        "accepted_shares": 0,
+        "core_clock": 1594,
+        "core_utilization": 100,
+        "fan": 39,
+        "hashrate": "19.87 M",
+        "hashrate2": "0.000 ",
+        "hashrate2_raw": 0,
+        "hashrate_raw": 19872956.660259776,
+        "id": 0,
+        "info": "NVIDIA GeForce GTX 1060 6GB",
+        "invalid_shares": 0,
+        "mem_clock": 4704,
+        "mem_utilization": 93,
+        "pci_bus_id": 1,
+        "power": 89,
+        "rejected_shares": 0,
+        "temperature": 61
+      }
+    ],
+    "total_hashrate": "19.87 M",
+    "total_hashrate2": "0.000 ",
+    "total_hashrate2_raw": 0,
+    "total_hashrate_raw": 19872956.660259776,
+    "total_power_consume": 89
+  },
+  "reboot_times": 0,
+  "start_time": 1620926547,
+  "stratum": {
+    "accepted_shares": 0,
+    "algorithm": "ethash",
+    "difficulty": "4.295 G",
+    "dual_mine": false,
+    "invalid_shares": 0,
+    "latency": 0,
+    "pool_hashrate_10m": "0.000 ",
+    "pool_hashrate_24h": "0.000 ",
+    "pool_hashrate_4h": "0.000 ",
+    "rejected_shares": 0,
+    "url": "eu.ezil.me:5555",
+    "use_ssl": false,
+    "user": "0x1c968c05c64964dA8146031dbE9e2e21d3B6432C.zil17djp4ds0f6w47d66lyktmgtsx7naf8jl5wr948.Daniel_PC"
+  },
+  "version": "37.1",
+  "last_update": 1620926687.024966
+}

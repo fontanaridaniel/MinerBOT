@@ -1,0 +1,49 @@
+{
+  "miner": {
+    "devices": [
+      {
+        "accepted_shares": 1799,
+        "core_clock": 2100,
+        "core_utilization": 99,
+        "fan": 40,
+        "hashrate": "33.9 M",
+        "hashrate2": "0.000 ",
+        "hashrate2_raw": 0,
+        "hashrate_raw": 21154338.403684746,
+        "id": 0,
+        "info": "NVIDIA GeForce GTX 1660",
+        "invalid_shares": 0,
+        "mem_clock": 4900,
+        "mem_utilization": 94,
+        "pci_bus_id": 1,
+        "power": 95,
+        "rejected_shares": 0,
+        "temperature": 62
+      }
+    ],
+    "total_hashrate": "21.15 M",
+    "total_hashrate2": "0.000 ",
+    "total_hashrate2_raw": 0,
+    "total_hashrate_raw": 21154338.403684746,
+    "total_power_consume": 95
+  },
+  "reboot_times": 1,
+  "start_time": 1620742930,
+  "stratum": {
+    "accepted_shares": 2,
+    "algorithm": "ethash",
+    "difficulty": "4.295 G",
+    "dual_mine": "false",
+    "invalid_shares": 0,
+    "latency": 54,
+    "pool_hashrate_10m": "50.23 M",
+    "pool_hashrate_24h": "50.23 M",
+    "pool_hashrate_4h": "50.23 M",
+    "rejected_shares": 0,
+    "url": "eu.ezil.me:5555",
+    "use_ssl": "false",
+    "user": "0x1bb2e036243074caF80705461C6705AF787f5877.zil15e6ry53yuqh2whkuad5v07qcg8v8s3wel6yrz0.David_PC"
+  },
+  "version": "37.1",
+  "last_update": 1620926687.6066642
+}

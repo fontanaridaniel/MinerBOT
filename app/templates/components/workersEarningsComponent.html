@@ -1,0 +1,93 @@
+<div class="workersEarnings desktop">
+    <table>
+        <tbody>
+            <tr class="header">
+                <td>WORKERS</td>
+                <td>MINUTES</td>
+                <td>POWER</td>
+                <td>%</td>
+                <td>ETH</td>
+                <td>EUR</td>
+                <td class="last">EARNINGS</td>
+            </tr>
+            {% for i in range(totalData|length) %}
+            {% if i != totalData|length - 1%}
+            <tr class="worker">
+                {% else %}
+            <tr class="worker last">
+                {% endif %}
+                <td>{{ totalData[i]["worker"] }}</td>
+                <td>{{ totalData[i]["minutes"] }}</td>
+                <td>{{ totalData[i]["powerPrice"]|round(2) }} €</td>
+                <td>{{ totalData[i]["%"]|round(2) }} %</td>
+                <td>{{ totalData[i]["ETH"]|round(6) }}</td>
+                <td>{{ totalData[i]["ETH"]|convToEur("eth") }} €</td>
+                <td class="earnings">{{ (totalData[i]["ETH"]|convToEur("eth") - totalData[i]["powerPrice"])|round(2)}} €
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div class="workersEarnings mobile">
+    <table>
+        <tbody>
+            {% for i in range(totalData|length) %}
+            <tr>
+                <td colspan="2" class="worker">{{ totalData[i]["worker"] }}</td>
+            </tr>
+            <tr>
+                <td class="header">MINUTES</td>
+                <td>{{ totalData[i]["minutes"] }}</td>
+            </tr>
+            <tr>
+                <td class="header">POWER</td>
+                <td>{{ totalData[i]["powerPrice"]|round(2) }} €</td>
+            </tr>
+            <tr>
+                <td class="header">%</td>
+                <td>{{ totalData[i]["%"]|round(2) }} %</td>
+            </tr>
+            <tr>
+                <td class="header">ETH</td>
+                <td>{{ totalData[i]["ETH"]|round(6) }}</td>
+            </tr>
+            <tr>
+                <td class="header">EUR</td>
+                <td>{{ totalData[i]["ETH"]|convToEur("eth") }} €</td>
+            </tr>
+            <tr class="earnings">
+                <td class="header">EARNINGS</td>
+                <td class="earnings">{{ (totalData[i]["ETH"]|convToEur("eth") - totalData[i]["powerPrice"])|round(2)}} €
+                </td>
+            </tr>
+            <tr class="spacer"></tr>
+            {% endfor %}
+            <!-- <tr class="header">
+                <td>WORKERS</td>
+                <td>MINUTES</td>
+                <td>POWER</td>
+                <td>%</td>
+                <td>ETH</td>
+                <td>EUR</td>
+                <td class="last">EARNINGS</td>
+            </tr>
+            {% for i in range(totalData|length) %}
+            {% if i != totalData|length - 1%}
+            <tr class="worker">
+            {% else %}
+            <tr class="worker last">
+            {% endif %}
+                <td>{{ totalData[i]["worker"] }}</td>
+                <td>{{ totalData[i]["minutes"] }}</td>
+                <td>{{ totalData[i]["powerPrice"]|round(2) }} €</td>
+                <td>{{ totalData[i]["%"]|round(2) }} %</td>
+                <td>{{ totalData[i]["ETH"]|round(6) }}</td>
+                <td>{{ totalData[i]["ETH"]|convToEur("eth") }} €</td>
+                <td class="earnings">{{ (totalData[i]["ETH"]|convToEur("eth") - totalData[i]["powerPrice"])|round(2)}} €</td>
+            </tr>
+            {% endfor %} -->
+        </tbody>
+    </table>
+</div>

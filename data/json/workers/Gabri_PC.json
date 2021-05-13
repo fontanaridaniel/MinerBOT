@@ -1,0 +1,49 @@
+{
+  "miner": {
+    "devices": [
+      {
+        "accepted_shares": 98,
+        "core_clock": 1485,
+        "core_utilization": 100,
+        "fan": 39,
+        "hashrate": "25.18 M",
+        "hashrate2": "0.000 ",
+        "hashrate2_raw": 0,
+        "hashrate_raw": 25182700.59405825,
+        "id": 0,
+        "info": "GeForce GTX 1660 SUPER",
+        "invalid_shares": 0,
+        "mem_clock": 6801,
+        "mem_utilization": 72,
+        "pci_bus_id": 41,
+        "power": 79,
+        "rejected_shares": 0,
+        "temperature": 65
+      }
+    ],
+    "total_hashrate": "25.18 M",
+    "total_hashrate2": "0.000 ",
+    "total_hashrate2_raw": 0,
+    "total_hashrate_raw": 25182700.59405825,
+    "total_power_consume": 79
+  },
+  "reboot_times": 0,
+  "start_time": 1620906723,
+  "stratum": {
+    "accepted_shares": 98,
+    "algorithm": "ethash",
+    "difficulty": "4.295 G",
+    "dual_mine": false,
+    "invalid_shares": 0,
+    "latency": 72,
+    "pool_hashrate_10m": "7.064 M",
+    "pool_hashrate_24h": "21.09 M",
+    "pool_hashrate_4h": "21.86 M",
+    "rejected_shares": 0,
+    "url": "eu.ezil.me:5555",
+    "use_ssl": false,
+    "user": "0x1c968c05c64964dA8146031dbE9e2e21d3B6432C.zil17djp4ds0f6w47d66lyktmgtsx7naf8jl5wr948.Gabri_PC"
+  },
+  "version": "37.1",
+  "last_update": 1620926686.497315
+}

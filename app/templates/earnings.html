@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earnings</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}"/>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/_constants.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/earnings.css') }}">
+
+    <!-- COMPONENTS CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/components/monthEarningsComparisonComponent.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/components/workersEarningsComponent.css') }}">
+
+
+    <!-- JS -->
+    <script src="https://kit.fontawesome.com/100b505ca0.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="topSection">
+        <a href="{{url_for('index')}}"><i class="fas fa-angle-left"></i> BACK</a>
+        <h1>Earnings</h1>
+    </div>
+    <div class="bottomSection">
+        <div id="monthWarningsComparison"></div>
+        <div id="workersEarnings"></div>
+    </div>
+
+    <!-- JS -->
+    <script src="{{ url_for('static', filename='js/earnings.js') }}"></script>
+</body>
+
+</html>

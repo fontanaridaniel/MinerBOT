@@ -1,0 +1,203 @@
+<div class="total">
+    <div class="header">
+        <p>TOTAL</p>
+    </div>
+    <div class="hashrate">
+        <p>HASHRATE:</p>
+        <p>{{total['hashrate']}} MH/s</p>
+    </div>
+    <div class="shares">
+        <p>SHARES:</p>
+        <p>{{total['accepted_shares']}} | {{total['rejected_shares']}} | {{total['invalid_shares']}}</p>
+    </div>
+    <div class="power">
+        <p>POWER:</p>
+        <p>{{total['power']}} W</p>
+    </div>
+</div>
+<table class="workerStateDesktop">
+    {% for worker in workersState %}
+    <tr class="info">
+        {% if currentTime - worker["last_update"] < 10 %}
+        <td colspan="8" style="background: #4AEB60;">
+            <p>
+                <span>{{worker['stratum']['user'].split('.')[-1]}}</span>
+                - Uptime: {{worker['start_time']|uptime}}
+            </p>
+        </td>
+        {% else %}
+        <td colspan="8" style="background: #EB4F4A;">
+            <p>
+                <span>{{worker['stratum']['user'].split('.')[-1]}}</span>
+                - Offline since: {{worker["last_update"]|epochToDatetime}}
+            </p>
+        </td>
+
+        {% endif %}
+
+    </tr>
+
+    <tr class="header">
+        <td>GPU</td>
+        <td>HASHRATE</td>
+        <td>SHARES</td>
+        <td>TEMP</td>
+        <td>FAN</td>
+        <td>POWER</td>
+        <td>CORE CLOCK</td>
+        <td>MEM CLOCK</td>
+    </tr>
+    {% for i in range(worker['miner']['devices']|length) %}
+    {% if i != worker['miner']['devices']|length - 1%}
+    <tr class="gpu">
+        {% else %}
+    <tr class="gpu last">
+        {% endif %}
+        {% if currentTime - worker["last_update"] < 10 %}
+        <td>{{worker['miner']['devices'][i]['info']}}</td>
+        <td>{{worker['miner']['devices'][i]['hashrate'] | removeHashrateM}} MH/s</td>
+        <td>
+            {{worker['miner']['devices'][i]['accepted_shares']}} |
+            {{worker['miner']['devices'][i]['rejected_shares']}} |
+            {{worker['miner']['devices'][i]['invalid_shares']}}
+        </td>
+        <td>{{worker['miner']['devices'][i]['temperature']}} °C</td>
+        <td>{{worker['miner']['devices'][i]['fan']}} %</td>
+        <td>{{worker['miner']['devices'][i]['power']}} W</td>
+        <td>{{worker['miner']['devices'][i]['core_clock']}} MHz</td>
+        <td>{{worker['miner']['devices'][i]['mem_clock']}} MHz</td>
+        {% else %}
+        <td>{{worker['miner']['devices'][i]['info']}}</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        {% endif %}
+    </tr>
+    {% endfor %}
+    </tr>
+    <tr class="spacer">
+        <td colspan="8"></td>
+    </tr>
+    {% endfor %}
+</table>
+
+<table class="workerStateMobile">
+    <tbody>
+        {% for worker in workersState %}
+        <tr>
+            {% if currentTime - worker["last_update"] < 10 %}
+            <td class="info" colspan="2" style="background: #4AEB60;">
+                <p>
+                    <span>{{worker['stratum']['user'].split('.')[-1]}}</span>
+                    - Uptime: {{worker['start_time']|uptime}}
+                </p>
+            </td>
+            {% else %}
+            <td class="info" colspan="2" style="background: #EB4F4A;">
+                <p>
+                    <span>{{worker['stratum']['user'].split('.')[-1]}}</span>
+                    - Off since: {{worker["last_update"]|epochToDatetime}}
+                </p>
+            </td>
+            {% endif %}
+        </tr>
+        {% for i in range(worker['miner']['devices']|length) %}
+        {% if currentTime - worker["last_update"] < 10 %}
+        <tr>
+            <td class="header">GPU</td>
+            <td class="gpu">{{worker['miner']['devices'][i]['info']}}</td>
+        </tr>
+        <tr>
+            <td class="header">HASHRATE</td>
+            <td class="gpu">{{worker['miner']['devices'][i]['hashrate'] | removeHashrateM}} MH/s</td>
+        </tr>
+        <tr>
+            <td class="header">SHARES</td>
+            <td class="gpu">
+                {{worker['miner']['devices'][i]['accepted_shares']}} |
+                {{worker['miner']['devices'][i]['rejected_shares']}} |
+                {{worker['miner']['devices'][i]['invalid_shares']}}
+            </td>
+        </tr>
+        <tr>
+            <td class="header">TEMP</td>
+            <td class="gpu">{{worker['miner']['devices'][i]['temperature']}} °C</td>
+        </tr>
+        <tr>
+            <td class="header">FAN</td>
+            <td class="gpu">{{worker['miner']['devices'][i]['fan']}} %</td>
+        </tr>
+        <tr>
+            <td class="header">POWER</td>
+            <td class="gpu">{{worker['miner']['devices'][i]['power']}} W</td>
+        </tr>
+        <tr>
+            <td class="header">CORE CLOCK</td>
+            <td class="gpu">{{worker['miner']['devices'][i]['core_clock']}} MHz</td>
+        </tr>
+        {% if i != worker['miner']['devices']|length - 1%}
+        <tr>
+            <td class="header last">MEM CLOCK</td>
+            <td class="gpu last">{{worker['miner']['devices'][i]['mem_clock']}} MHz</td>
+        </tr>
+        {% else %}
+        <tr class="last">
+            <td class="header last">MEM CLOCK</td>
+            <td class="gpu last">{{worker['miner']['devices'][i]['mem_clock']}} MHz</td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="2"></td>
+        </tr>
+        {% endif %}
+        {% else %}
+        <tr>
+            <td class="header">GPU</td>
+            <td class="gpu">{{worker['miner']['devices'][i]['info']}}</td>
+        </tr>
+        <tr>
+            <td class="header">HASHRATE</td>
+            <td class="gpu">-</td>
+        </tr>
+        <tr>
+            <td class="header">SHARES</td>
+            <td class="gpu">-</td>
+        </tr>
+        <tr>
+            <td class="header">TEMP</td>
+            <td class="gpu">-</td>
+        </tr>
+        <tr>
+            <td class="header">FAN</td>
+            <td class="gpu">-</td>
+        </tr>
+        <tr>
+            <td class="header">POWER</td>
+            <td class="gpu">-</td>
+        </tr>
+        <tr>
+            <td class="header">CORE CLOCK</td>
+            <td class="gpu">-</td>
+        </tr>
+        {% if i != worker['miner']['devices']|length - 1%}
+        <tr>
+            <td class="header last">MEM CLOCK</td>
+            <td class="gpu last">-</td>
+        </tr>
+        {% else %}
+        <tr class="last">
+            <td class="header last">MEM CLOCK</td>
+            <td class="gpu last">-</td>
+        </tr>
+        <tr class="spacer">
+            <td colspan="2"></td>
+        </tr>
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+        {% endfor %}
+    </tbody>
+</table>

@@ -1,0 +1,41 @@
+<table class="monthEarningsComparison">
+    <tbody>
+        <tr>
+            <td colspan="3" class="title eth">ETH - Current month earnings</td>
+        </tr>
+        <tr>
+            <td class="header">START</td>
+            <td class="header">CURRENT</td>
+            <td class="header eth">EARNINGS</td>
+        </tr>
+        <tr>
+            <td>{{start[0]|round(6)}}</td>
+            <td>{{current[0]|round(6)}}</td>
+            <td class="eth">{{ethEarn|round(6)}}</td>
+        </tr>
+        <tr class="last">
+            <td>{{start[0]|convToEur('eth')}} €</td>
+            <td>{{current[0]|convToEur('eth')}} €</td>
+            <td class="eth">{{ethEarn|convToEur('eth')}} €</td>
+        </tr>
+        <tr class="spacer"></tr>
+        <tr>
+            <td colspan="3" class="title zil">ZIL - Current month earnings</td>
+        </tr>
+        <tr>
+            <td class="header">START</td>
+            <td class="header">CURRENT</td>
+            <td class="header zil">EARNINGS</td>
+        </tr>
+        <tr>
+            <td>{{start[1]|round(6)}}</td>
+            <td>{{current[1]|round(6)}}</td>
+            <td class="zil">{{zilEarn|round(6)}}</td>
+        </tr>
+        <tr class="last">
+            <td>{{start[1]|convToEur('zil')}} €</td>
+            <td>{{current[1]|convToEur('zil')}} €</td>
+            <td class="zil">{{zilEarn|convToEur('zil')}} €</td>
+        </tr>
+    </tbody>
+</table>

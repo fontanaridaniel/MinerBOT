@@ -1,0 +1,49 @@
+{
+  "miner": {
+    "devices": [
+      {
+        "accepted_shares": 231,
+        "core_clock": 1961,
+        "core_utilization": 100,
+        "fan": 90,
+        "hashrate": "23.27 M",
+        "hashrate2": "0.000 ",
+        "hashrate2_raw": 0,
+        "hashrate_raw": 23267912.343505714,
+        "id": 0,
+        "info": "GeForce GTX 1060 6GB",
+        "invalid_shares": 0,
+        "mem_clock": 4404,
+        "mem_utilization": 100,
+        "pci_bus_id": 1,
+        "power": 114,
+        "rejected_shares": 1,
+        "temperature": 64
+      }
+    ],
+    "total_hashrate": "23.27 M",
+    "total_hashrate2": "0.000 ",
+    "total_hashrate2_raw": 0,
+    "total_hashrate_raw": 23267912.343505714,
+    "total_power_consume": 114
+  },
+  "reboot_times": 0,
+  "start_time": 1620880562,
+  "stratum": {
+    "accepted_shares": 231,
+    "algorithm": "ethash",
+    "difficulty": "4.295 G",
+    "dual_mine": false,
+    "invalid_shares": 0,
+    "latency": 44,
+    "pool_hashrate_10m": "28.16 M",
+    "pool_hashrate_24h": "21.51 M",
+    "pool_hashrate_4h": "22.58 M",
+    "rejected_shares": 1,
+    "url": "eu.ezil.me:5555",
+    "use_ssl": false,
+    "user": "0x1c968c05c64964dA8146031dbE9e2e21d3B6432C.zil17djp4ds0f6w47d66lyktmgtsx7naf8jl5wr948.PATRIZIO_PC"
+  },
+  "version": "37.1",
+  "last_update": 1620926685.9630823
+}

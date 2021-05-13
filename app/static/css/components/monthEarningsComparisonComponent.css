@@ -1,0 +1,57 @@
+.monthEarningsComparison {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    max-width: 890px;
+    margin: 0 auto;
+}
+
+.monthEarningsComparison td {
+    padding: 4px 16px;
+    text-align: center;
+    background: var(--lightBackgroundColor);
+    border-right: var(--defaultBorder);
+    border-bottom: var(--defaultBorder);
+}
+
+.monthEarningsComparison tr :first-child {
+    border-left: var(--defaultBorder);
+}
+
+.monthEarningsComparison .last :first-child {
+    border-bottom-left-radius: var(--defaultBorderRadius);
+}
+
+.monthEarningsComparison .last :last-child {
+    border-bottom-right-radius: var(--defaultBorderRadius);
+}
+
+.monthEarningsComparison .title {
+    border-top-left-radius: var(--defaultBorderRadius);
+    border-top-right-radius: var(--defaultBorderRadius);
+    font-weight: bold;
+}
+
+.monthEarningsComparison .eth {
+    background: var(--ethColor);
+    font-weight: bold;
+}
+
+.monthEarningsComparison .zil {
+    background: var(--zilColor);
+    font-weight: bold;
+}
+
+.monthEarningsComparison .header {
+    font-weight: bold;
+}
+
+.spacer {
+    height: 16px;
+}
+
+@media only screen and (max-width: 800px) {
+    .spacer {
+        height: 8px;
+    }
+}

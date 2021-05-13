@@ -1,0 +1,10 @@
+:root {
+    --backgroundColor: #131518;
+    --lightBackgroundColor: #1b2025;
+    --defaultTextColor: #ffffff;
+    --defaultBorder: 1px solid #2d3138;
+    --defaultBorderRadius: 4px;
+    --ethColor: #624aeb;
+    --zilColor: #eb7d4a;
+    --defaultTransition: 0.3s;
+}

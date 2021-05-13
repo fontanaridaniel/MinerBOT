@@ -1,0 +1,49 @@
+{
+  "miner": {
+    "devices": [
+      {
+        "accepted_shares": 125,
+        "core_clock": 1569,
+        "core_utilization": 100,
+        "fan": 75,
+        "hashrate": "22.28 M",
+        "hashrate2": "0.000 ",
+        "hashrate2_raw": 0,
+        "hashrate_raw": 22281457.778767727,
+        "id": 0,
+        "info": "NVIDIA GeForce GTX 1080",
+        "invalid_shares": 0,
+        "mem_clock": 4665,
+        "mem_utilization": 76,
+        "pci_bus_id": 1,
+        "power": 134,
+        "rejected_shares": 0,
+        "temperature": 60
+      }
+    ],
+    "total_hashrate": "22.28 M",
+    "total_hashrate2": "0.000 ",
+    "total_hashrate2_raw": 0,
+    "total_hashrate_raw": 22281457.778767727,
+    "total_power_consume": 134
+  },
+  "reboot_times": 0,
+  "start_time": 1620897377,
+  "stratum": {
+    "accepted_shares": 125,
+    "algorithm": "ethash",
+    "difficulty": "4.295 G",
+    "dual_mine": false,
+    "invalid_shares": 0,
+    "latency": 49,
+    "pool_hashrate_10m": "21.33 M",
+    "pool_hashrate_24h": "18.32 M",
+    "pool_hashrate_4h": "17.93 M",
+    "rejected_shares": 0,
+    "url": "eu.ezil.me:5555",
+    "use_ssl": false,
+    "user": "0x1c968c05c64964dA8146031dbE9e2e21d3B6432C.zil17djp4ds0f6w47d66lyktmgtsx7naf8jl5wr948.Ste_PC"
+  },
+  "version": "37.1",
+  "last_update": 1620926686.1494498
+}
