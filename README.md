@@ -1,4 +1,4 @@
-# MinerBOT_public
+# MinerBOT
 
 ## Descrizione:
  Sito creato per la gestione dei computer destinati al mining di ETHEREUM.
